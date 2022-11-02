@@ -1,6 +1,8 @@
 require "faker"
-puts "🌱 Seeding spices..."
+puts "🌱 Seeding..."
 
+Company.create(company_name: "Minnesota Classic Trucks", city: "St.Cloud", state: 'Minnesota')
+Company.create(company_name: "Florida Classic Trucks", city: "Tampa", state: 'Florida')
 
 20.times do
   Employee.create(
