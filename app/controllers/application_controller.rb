@@ -8,10 +8,10 @@ end
 
 post '/employees' do
   employee = Employee.create(
-    first_name: params[:first_name]
-    last_name: params[:last_name]
-    position: params[:position]
-    salary: params[:salary]
+    first_name: params[:first_name],
+    last_name: params[:last_name],
+    position: params[:position],
+    salary: params[:salary],
     company_id: params[:company_id]
   )
   employee.to_json
