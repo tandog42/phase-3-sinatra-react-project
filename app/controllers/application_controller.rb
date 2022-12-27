@@ -49,8 +49,8 @@ class ApplicationController < Sinatra::Base
   end
 
   get "/companies" do
-    company = Company.all
-    company.to_json
+    companies = Company.all
+    companies.to_json(include: [:employees])
   end
 
   post "/companies" do
