@@ -1,15 +1,17 @@
 class ApplicationController < Sinatra::Base
   set :default_content_type, "application/json"
+  
+  get "/employees" do
+    employee = Employee.all
+    employee.to_json
+  end
 
+  
   get "/employees/:id" do
     employee = Employee.find_by(id: params[:id])
     employee.to_json
   end
 
-  get "/employees" do
-    employee = Employee.all
-    employee.to_json
-  end
 
   post "/employees" do
     employee =
