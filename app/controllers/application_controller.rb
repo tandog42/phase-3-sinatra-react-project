@@ -14,13 +14,14 @@ class ApplicationController < Sinatra::Base
 
 
   post "/employees" do
+    company = Company.find(params[:company_id])
     employee =
-      Employee.create(
+     company.employees.create(
         first_name: params[:first_name],
         last_name: params[:last_name],
         position: params[:position],
         salary: params[:salary],
-        company_id: params[:company_id],
+        # company_id: params[:company_id],
       )
     employee.to_json
   end
