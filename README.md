@@ -2,22 +2,25 @@
 
 I created this application to keep track of my current employees and there data. 
 This application has a  React fronted that interacts with and API to preform CRUD actions.
-App uses Active Record to interact with a Sinatra Backend.
-
+ This app uses Active Record to interact with a Sinatra Backend.
+---
 ## Models 
+---
+1. Companies - has_many employees
 
-1. Companys - has_many employees
+Companies has Read and Create CRUD capabilites.
+
+- Read all companies
+- Create a new Company
+--- 
 2. Employees - belongs_to companys.
 
-## Migrations
+Employees has full CRUD capabilities
 
-There are two migrations. 
+- Read All employees
+- Create new employee
+- Update an employee
+- Delete a company
 
-1. CreateCompanies
-Creates a table called companies with three columns company_name, city, state,
-
-2. CreateEmployees
-Creates a table called employees that has five columns first_name, last_name, position, salary and a company_id(foreign key)
-
-
-## Seeds
+---
+[Front end Repo](https://github.com/tandog42/phase-3-front.git)
